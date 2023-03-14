@@ -1370,11 +1370,11 @@ a:hover {
     cursor: pointer;
     position: relative;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 71px;
+    height: 71px;
     position: absolute;
-    top: 13px;
-    left: 13px;
+    top: 2px;
+    left: 2px;
 }
 
 .tfvideo-button span {
@@ -1390,8 +1390,8 @@ a:hover {
     border-radius: 50%;
     -webkit-animation: tfvideo-animaion 2s linear infinite;
     animation: tfvideo-animaion 2s linear infinite;
-    -webkit-box-shadow: 0 0 0 10px #2a58ff;
-    box-shadow: 0 0 0 10px #2a58ff;
+    -webkit-box-shadow: 0 0 0 10px #2D81A1;
+    box-shadow: 0 0 0 10px #2D81A1;
 }
 
 .tfvideo-button.st-color1 span {
@@ -1605,13 +1605,16 @@ a:hover {
 /*End Wave Animaiton*/
 .st-hero-slide.st-style2 {
     height: 800px;
-    background-color: #2a58ff;
+    /*background-color: #2a58ff;*/
+    background-color: #2D81A1;
+    /*background-color: #4C8AA1;*/
     position: relative;
 }
 
 .st-hero-slide.st-style2.st-type1 {
     height: 100vh;
-    background-color: #2a58ff;
+    /*background-color: #2a58ff;*/
+    background-color: #2D81A1;
     position: relative;
     border-radius: 0 0 100% 0;
     width: calc(100% - 120px);
@@ -4705,7 +4708,8 @@ blockquote {
 .st-blue-color .st-preloader-wave:nth-of-type(3),
 .st-blue-color .st-preloader-wave:nth-of-type(4),
 .st-blue-color .st-preloader-wave:nth-of-type(5) {
-    background: #2a58ff;
+    /*background: #2a58ff;*/
+    background: #2D81A1;
 }
 
 /*Preloader Animaiton*/
@@ -4731,7 +4735,8 @@ blockquote {
 ----------------------------------------------------------------*/
 
 .st-blue-color a:hover {
-    color: #2a58ff;
+    /*color: #2a58ff;*/
+    color: #2D81A1;
 }
 
 .st-blue-color hr {
@@ -4786,7 +4791,9 @@ blockquote {
 .st-blue-color .st-iconbox.st-style1 .st-iconbox-icon,
 .st-blue-color .st-member-social-btn li a:hover,
 .st-blue-color .st-blog.st-style1 .st-blog-btn:hover {
-    color: #2a58ff;
+    /*color: #2a58ff;*/
+    /*color: #2D81A1;*/
+    color: #04e1cb;
 }
 
 .st-blue-color .tr-list li:after {
@@ -4803,11 +4810,13 @@ blockquote {
 .st-blue-color .owl-carousel.st-owl-controler1 .owl-dots button.active,
 .st-blue-color .st-progressbar-in,
 .st-blue-color .st-map-bar {
-    background-color: #2a58ff;
+    /*background-color: #2a58ff;*/
+    background-color: #2D81A1;
 }
 
 .st-blue-color .st-map-bar:hover {
-    background-color: rgba(42, 88, 255, 0.85);
+    /*background-color: rgba(42, 88, 255, 0.85);*/
+    background-color: #2D81A1;
 }
 
 .st-blue-color .st-btn.st-color2:hover {
@@ -4841,13 +4850,16 @@ blockquote {
 .st-blue-color .st-subscribe-form input:focus,
 .st-blue-color .st-contact-form input:focus,
 .st-blue-color .st-contact-form textarea:focus {
-    border-color: #2a58ff;
+    /*border-color: #2a58ff;*/
+    border-color: #2D81A1;
     outline: none;
 }
 
 .st-blue-color .st-map-marker-animation {
-    -webkit-box-shadow: 0 0 16px 8px #2a58ff;
-    box-shadow: 0 0 16px 8px #2a58ff;
+    /*-webkit-box-shadow: 0 0 16px 8px #2a58ff;*/
+    /*box-shadow: 0 0 16px 8px #2a58ff;*/
+    -webkit-box-shadow: #2D81A1;
+    box-shadow: #2D81A1;
 }
 
 .st-blue-color .st-project-meta h3 {
@@ -5322,4 +5334,16 @@ blockquote {
     -webkit-mask-repeat: no-repeat;
 }
 
-
+.list-check li:before {
+    content: '';
+    -webkit-mask-image: url(../img/blue-img/check-solid.svg);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    vertical-align: text-bottom;
+    background-color: #04e1cb;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
