@@ -5487,9 +5487,13 @@ blockquote {
 @media screen and (max-width: 575px) {
     .st-hero-text.st-style1 h1 {
         font-size: 28px;
+        padding: 0 10px 0 10px;
     }
     .st-icon-box-title {
         font-size: 18px;
+    }
+    .st-hero-subtitle {
+        padding: 0 10px 0 10px;
     }
 }
 
