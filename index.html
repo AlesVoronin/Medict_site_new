@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/animate.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet prefetch" href="assets/css/jquery.fancybox.min.css">
+  <script src=”//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js”></script>
 </head>
 
 <body class="st-blue-color">
@@ -630,15 +631,12 @@
       <div class="row">
         <div class="col-lg-6">
           <div id="cf-msg"></div>
-          <form action="assets/php/mail.php" method="post" class="st-contact-form" id="cf">
+          <form enctype="multipart/form-data" method="post" class="st-contact-form" id="form">
             <input type="text" placeholder="ФИО" id="name" name="name">
-            <input type="text" placeholder="Контактный номер телефона" id="subject" name="subject">
+            <input type="text" placeholder="Контактный номер телефона" id="number" name="number">
             <input type="text" placeholder="Email" id="email" name="email">
             <textarea cols="30" rows="10" placeholder="Введите свой запрос" id="msg" name="msg"></textarea>
-<!--            <button class="st-btn st-style1 st-size1 st-color2" type="submit" id="submit" name="submit" onclick="sendEmail()">-->
-<!--              Отправить-->
-<!--            </button>-->
-            <button class="st-btn st-style1 st-size1 st-color2" onclick="sendEmail()">
+            <button class="st-btn st-style1 st-size1 st-color2" type="submit" id="submit" name="submit">
               Отправить
             </button>
           </form>
@@ -784,6 +782,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/top-button.js"></script>
 <script src="assets/js/accordeon.js"></script>
+<script src="assets/js/form.js"></script>
 
 <script src="assets/js/jquery.fancybox.min.js"></script>
 <script>
