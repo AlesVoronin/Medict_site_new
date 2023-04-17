@@ -20,10 +20,13 @@
   <link rel="stylesheet" href="assets/css/animate.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet prefetch" href="assets/css/jquery.fancybox.min.css">
-  <script src=”//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js”></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="/assets/js/gsap.min.js"></script>
 </head>
 
 <body class="st-blue-color">
+
+<div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" class="smooth-scroll">↑</button>
 
@@ -579,13 +582,13 @@
           <a href="assets/img/blue-img/gallery/gallery_5.jpg"
              class="st-single-project st-bg st-height1 wow fadeIn"
              data-fancybox="images"
-             data-caption="ГУ «Минский научно-практический центр хирургии, трансплантологии и гематологии»"
+             data-caption="РНПЦ «Кардиология»"
              data-wow-duration="0.8s"
              data-wow-delay="0.2s"
              data-src="assets/img/blue-img/gallery/gallery_5.jpg"
           >
             <div class="st-project-meta isotop-rb">
-              <h3>ГУ «Минский научно-практический центр хирургии, трансплантологии и гематологии»</h3>
+              <h3>РНПЦ "Кардиология"</h3>
 <!--              <span>Описание 5</span>-->
             </div>
           </a>
@@ -595,13 +598,13 @@
           <a href="assets/img/blue-img/gallery/gallery_6.jpg"
              class="st-single-project st-bg st-height1 wow fadeIn isotop-rb"
              data-fancybox="images"
-             data-caption="ГУ «Минский научно-практический центр хирургии, трансплантологии и гематологии»"
+             data-caption="УЗ «Минский городской клинический онкологический диспансер»"
              data-wow-duration="0.8s"
              data-wow-delay="0.2s"
              data-src="assets/img/blue-img/gallery/gallery_6.jpg"
           >
             <div class="st-project-meta">
-              <h3>ГУ «Минский научно-практический центр хирургии, трансплантологии и гематологии»</h3>
+              <h3>УЗ «Минский городской клинический онкологический диспансер»</h3>
 <!--              <span>Описание 6</span>-->
             </div>
           </a>
@@ -631,11 +634,11 @@
       <div class="row">
         <div class="col-lg-6">
           <div id="cf-msg"></div>
-          <form enctype="multipart/form-data" method="post" class="st-contact-form" id="form">
+          <form enctype="multipart/form-data" method="post" class="st-contact-form" id="form" onsubmit="send(event,'send.php')">
             <input type="text" placeholder="ФИО" id="name" name="name">
             <input type="text" placeholder="Контактный номер телефона" id="number" name="number">
             <input type="text" placeholder="Email" id="email" name="email">
-            <textarea cols="30" rows="10" placeholder="Введите свой запрос" id="msg" name="msg"></textarea>
+            <textarea cols="30" rows="10" placeholder="Введите свой запрос" id="msg" name="text"></textarea>
             <button class="st-btn st-style1 st-size1 st-color2" type="submit" id="submit" name="submit">
               Отправить
             </button>
@@ -782,13 +785,41 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/top-button.js"></script>
 <script src="assets/js/accordeon.js"></script>
-<script src="assets/js/form.js"></script>
 
 <script src="assets/js/jquery.fancybox.min.js"></script>
 <script>
     $(function () {
         $("[data-fancybox]").fancybox();
     });
+</script>
+
+<script>
+    // Отправка данных на сервер
+    function send(event, php){
+        console.log("Отправка запроса");
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        var req = new XMLHttpRequest();
+        req.open('POST', php, true);
+        // req.onload = function() {
+        //     if (req.status >= 200 && req.status < 400) {
+        //         json = JSON.parse(this.response); // Ебанный internet explorer 11
+        //         console.log(json);
+        //
+        //         // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        //         if (json.result == "success") {
+        //             // Если сообщение отправлено
+        //             alert("Сообщение отправлено");
+        //         } else {
+        //             // Если произошла ошибка
+        //             alert("Ошибка. Сообщение не отправлено");
+        //         }
+        //         // Если не удалось связаться с php файлом
+        //     } else {alert("Ошибка сервера. Номер: "+req.status);}};
+
+// Если не удалось отправить запрос. Стоит блок на хостинге
+        req.onerror = function() {alert("Ошибка отправки запроса");};
+        req.send(new FormData(event.target));
+    }
 </script>
 
 </body>

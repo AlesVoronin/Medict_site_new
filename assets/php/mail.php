@@ -11,3 +11,5 @@ $msg 		= $_POST['msg'];
 $output 	= "Name: ".$name."\nEmail: ".$email."\nSubject: ".$subject."\n\nMessage: ".$msg;
 
 $send		= mail($to, $name, $output, $headers);
+
+?>
